@@ -4,98 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Netflix Page</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #141414;
-      color: #fff;
-    }
-
-    /* Navigation Bar */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #141414;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .navbar .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #e50914;
-    }
-    .navbar ul {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-    }
-    .navbar ul li {
-      cursor: pointer;
-    }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      height: 70vh;
-      background: url('https://source.unsplash.com/1600x900/?movie') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 20px;
-      max-width: 600px;
-      margin: auto;
-    }
-    .hero button {
-      padding: 10px 20px;
-      font-size: 18px;
-      background-color: #e50914;
-      border: none;
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    /* Content Rows */
-    .content-row {
-      padding: 20px;
-    }
-    .content-row h2 {
-      margin-bottom: 10px;
-    }
-    .row {
-      display: flex;
-      gap: 10px;
-      overflow-x: auto;
-      padding-bottom: 10px;
-    }
-    .row img {
-      width: 200px;
-      border-radius: 5px;
-      transition: transform 0.2s ease-in-out;
-    }
-    .row img:hover {
-      transform: scale(1.1);
-    }
-
-    /* Footer */
-    .footer {
-      padding: 20px;
-      text-align: center;
-      background-color: #000;
-      color: #555;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navbar -->
@@ -122,20 +31,20 @@
   <div class="content-row">
     <h2>Trending Now</h2>
     <div class="row">
-      <img src="https://source.unsplash.com/200x300/?film" alt="Devara.jpeg">
-      <img src="https://source.unsplash.com/200x300/?cinema" alt="Salaar Part 1 Ceasefire.jpeg">
-      <img src="https://source.unsplash.com/200x300/?entertainment" alt="Venom.jpeg">
-      <img src="https://source.unsplash.com/200x300/?series" alt="GOT.jpeg">
+      <img src="images/Devara.jpeg" alt="Devara">
+    <img src="images/Salaar Part 1 Ceasefire.jpeg" alt="Salaar Part 1 Ceasefire">
+    <img src="images/Venom.jpeg" alt="Venom">
+    <img src="images/GOT.jpeg" alt="GOT">
     </div>
   </div>
 
   <div class="content-row">
     <h2>Popular on Netflix</h2>
     <div class="row">
-      <img src="https://source.unsplash.com/200x300/?drama" alt="Spiderman Homecoming.jpeg">
-      <img src="https://source.unsplash.com/200x300/?adventure" alt="Spiderman Homecoming.jpeg">
-      <img src="https://source.unsplash.com/200x300/?action" alt="Spiderman No Way Home.jpeg">
-      <img src="https://source.unsplash.com/200x300/?thriller" alt="Spiderman into the spiderverse.jpeg">
+      <img src="images/Spiderman Homecoming.webp" alt="Spiderman Homecoming">
+      <img src="images/Spideman Far From Home.jpeg" alt="Spiderman Homecoming">
+      <img src="images/Spiderman No Way Home.webp" alt="Spiderman No Way Home">
+      <img src="images/Spiderman into the spiderverse.jpeg" alt="Spiderman into the spiderverse">
     </div>
   </div>
 
