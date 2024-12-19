@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -21,13 +22,17 @@ body {
   }
   .navbar:hover {
     background-color: #000;
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.8);
   }
   .navbar .logo {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
     color: #e50914;
     letter-spacing: 1px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .navbar .logo:hover {
+    transform: scale(1.05);
   }
   .navbar ul {
     list-style: none;
@@ -54,6 +59,11 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    animation: heroFadeIn 1s ease-out;
+  }
+  @keyframes heroFadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
   .hero h1 {
     font-size: 54px;
@@ -87,29 +97,22 @@ body {
   
   /* Animations */
   @keyframes fadeInDown {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
   }
   @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
   }
   
   /* Content Rows */
   .content-row {
     padding: 40px 20px;
+    animation: slideIn 1s ease-out;
+  }
+  @keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0); }
   }
   .content-row h2 {
     font-size: 26px;
@@ -128,12 +131,8 @@ body {
     animation: growLine 0.5s ease-out;
   }
   @keyframes growLine {
-    from {
-      width: 0;
-    }
-    to {
-      width: 50px;
-    }
+    from { width: 0; }
+    to { width: 50px; }
   }
   .row {
     display: flex;
@@ -171,10 +170,12 @@ body {
     font-size: 14px;
     border-top: 3px solid #e50914;
   }
-/* Trending Section */
-.trending-row {
+  
+  /* Trending Section */
+  .trending-row {
     padding: 40px 20px;
     background-color: #1f1f1f;
+    animation: fadeInUp 1s ease-out;
   }
   .trending-row h2 {
     font-size: 28px;
@@ -192,12 +193,8 @@ body {
     animation: pulse 1s infinite;
   }
   @keyframes pulse {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
   }
   
   .trending-row .row {
@@ -205,19 +202,18 @@ body {
     gap: 15px;
     overflow-x: auto;
     padding-bottom: 10px;
-    align-items: center; /* Align images vertically */
-    justify-content: flex-start; /* Ensure images are aligned to the left */
+    align-items: center; /* Vertically align images */
+    justify-content: flex-start; /* Align images to the left */
   }
   
   .trending-row .row img {
     width: 200px;
     height: auto;
-    max-height: 300px; /* Restrict the max height */
+    max-height: 300px;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
     position: relative;
   }
-  
   .trending-row .row img:hover {
     transform: scale(1.1);
     box-shadow: 0px 10px 20px rgba(229, 9, 20, 0.6);
@@ -251,4 +247,4 @@ body {
     color: white;
     z-index: 2;
   }
-    
+  
