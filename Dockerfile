@@ -8,7 +8,9 @@ RUN rm -rf ./*
 
 # Copy the HTML and CSS files to the Nginx HTML directory
 COPY index.html .
-
+COPY style.css .
+#COPY images .
+COPY images /usr/share/nginx/html/images
 
 # Expose port 80 to serve the content
 EXPOSE 80
